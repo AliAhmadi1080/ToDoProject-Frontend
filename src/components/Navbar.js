@@ -29,7 +29,7 @@ export default function Navbar() {
           <NavbarItem text="درباره" />
           <NavbarItem
             text={
-              <p className=" text-2xl mr-[15rem]">
+              <p className=" text-2xl mr-[10rem]  cursor-auto">
                 تسک‌های امروز، موفقیت‌های فردا
               </p>
             }
