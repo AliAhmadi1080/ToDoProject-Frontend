@@ -1,9 +1,13 @@
+import { useContext } from "react";
 import ToDoItem from "./ToDoItem";
 import ToDoListContainer from "./ToDoListContainer";
+import userInfoContext from "../contexts/UserInfoContext";
 
 export default function ToDoSideBar() {
-  const ToDolist = [{ title: "خانه", todos: ["ظرف", "ماشین"] }];
-  const Taglist = [{ title: "زندگی" }, { title: "life" }];
+  let tag = useContext(userInfoContext).tag;
+  let todos = useContext(userInfoContext).todolist
+  const ToDolist = [...todos];
+  const Taglist = [...tag];
   return (
     <div className="text-left px-7 text-lg w-40 ml-2 bg-red-50 max-h-[40rem] overflow-y-auto">
       <h3 className=" text-xl text-center border-b-2 border-black">کار ها</h3>
