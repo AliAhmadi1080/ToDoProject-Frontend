@@ -1,5 +1,4 @@
 import { useState } from "react";
-import { redirect } from "react-router-dom";
 import Input from "./Input";
 
 export default function LoginForm() {
@@ -26,8 +25,8 @@ export default function LoginForm() {
     if (response.ok) {
       setIsLogin(true);
       localStorage.setItem("islogin", "true");
-      localStorage.setItem('refresh',data['refresh'])
-      localStorage.setItem('access',data['access'])
+      localStorage.setItem("refresh", data["refresh"]);
+      localStorage.setItem("access", data["access"]);
     } else {
       console.error(data.message);
     }
