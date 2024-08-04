@@ -6,7 +6,7 @@ import userInfoContext from "./contexts/UserInfoContext";
 function App() {
   const [usernameInfo] = useState({
     username: "علی",
-    isauth: true,
+    isauth: localStorage.getItem('islogin')=='true'?true : false,
   });
   const [tag] = useState([{ title: "life" }, { title: "زندگی" }]);
   const [toDolist] = useState([{ title: "خانه", todos: ["ظرف", "ماشین"] }]);
