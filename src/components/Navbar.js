@@ -15,7 +15,7 @@ export default function Navbar() {
           <NavbarItem text="درباره" />
           <NavbarItem
             text={
-              <p className=" text-2xl mr-[15rem] cursor-auto">
+              <p className=" text-2xl mr-[5rem] cursor-auto">
                 تسک‌های امروز، موفقیت‌های فردا
               </p>
             }
