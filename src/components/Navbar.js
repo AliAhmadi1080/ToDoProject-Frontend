@@ -7,10 +7,10 @@ export default function Navbar() {
   const userInfo = useContext(userInfoContext).user;
 
   return (
-    <div className="flex justify-start border border-black rounded-xl">
+    <div className="flex justify-start border  rounded-xl">
       {userInfo.isauth ? (
         <>
-          <NavbarProfile />
+
           <NavbarItem text="خانه" />
           <NavbarItem text="درباره" />
           <NavbarItem
