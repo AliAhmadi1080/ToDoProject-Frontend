@@ -1,7 +1,7 @@
 import { useContext } from "react";
 import userInfoContext from "../contexts/UserInfoContext";
 import NavbarItem from "./NavbarItem";
-import NavbarProfile from "./NavbarProfile";
+
 
 export default function Navbar() {
   const userInfo = useContext(userInfoContext).user;
@@ -10,12 +10,17 @@ export default function Navbar() {
     <div className="flex justify-start border  rounded-xl">
       {userInfo.isauth ? (
         <>
-
           <NavbarItem text="خانه" />
-          <NavbarItem text="درباره" />
           <NavbarItem
             text={
-              <p className=" text-2xl mr-[5rem] cursor-auto">
+              <>
+
+              </>
+            }
+          />
+          <NavbarItem
+            text={
+              <p className=" text-2xl cursor-auto">
                 تسک‌های امروز، موفقیت‌های فردا
               </p>
             }

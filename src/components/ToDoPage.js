@@ -7,8 +7,9 @@ import useChangeAccessToken from "../hooks/useChangeAccessToken";
 import { useNavigate, useParams } from "react-router-dom";
 import ToDoCreateContainer from "./ToDoCreateContainer";
 import ToDoEditContainer from "./ToDoEditContainer";
+import TagToDoListContainer from "./TagToDoContainer";
 
-export default function ToDoPage({which = "detail"}) {
+export default function ToDoPage({ which = "detail" }) {
   const navigate = useNavigate();
   const [getAccessToken] = useChangeAccessToken();
   const [todoList, setToDoList] = useState([]);
@@ -55,7 +56,6 @@ export default function ToDoPage({which = "detail"}) {
     getTag();
   }, []);
   if (which === "detail") {
-
     return (
       <>
         <Navbar />
@@ -67,29 +67,43 @@ export default function ToDoPage({which = "detail"}) {
         </div>
       </>
     );
-  } else if (which == "create") {
+  } else if (which === "create") {
     return (
-    <>
-      <Navbar />
-      <div className="flex h-full" dir="ltr">
-        <GetToDoContext.Provider value={[todoList, tagList]}>
-          <ToDoSideBar />
-          <ToDoCreateContainer />
-        </GetToDoContext.Provider>
-      </div>
-    </>);
-
+      <>
+        <Navbar />
+        <div className="flex h-full" dir="ltr">
+          <GetToDoContext.Provider value={[todoList, tagList]}>
+            <ToDoSideBar />
+            <ToDoCreateContainer />
+          </GetToDoContext.Provider>
+        </div>
+      </>
+    );
   } else if (which === "edit") {
-    return(
-    <>
-      <Navbar />
-      <div className="flex h-full" dir="ltr">
-        <GetToDoContext.Provider value={[todoList, tagList]}>
-          <ToDoSideBar />
-          {typeof todoId !== "undefined" ? <ToDoEditContainer /> : <></>}
-        </GetToDoContext.Provider>
-      </div>
-    </>);
+    return (
+      <>
+        <Navbar />
+        <div className="flex h-full" dir="ltr">
+          <GetToDoContext.Provider value={[todoList, tagList]}>
+            <ToDoSideBar />
+            {typeof todoId !== "undefined" ? <ToDoEditContainer /> : <></>}
+          </GetToDoContext.Provider>
+        </div>
+      </>
+    );
+  } else if (which === "tagtodo") {
+    return (
+      <>
+        <Navbar />
+        <div className="flex h-full" dir="ltr">
+          <GetToDoContext.Provider value={[todoList, tagList]}>
+            <ToDoSideBar />
+            <TagToDoListContainer />
+          </GetToDoContext.Provider>
+        </div>
+      </>
+    );
   }
-  return <></>
+  console.log("we are hare");
+  return <></>;
 }
