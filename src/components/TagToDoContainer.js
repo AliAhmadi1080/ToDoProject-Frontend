@@ -22,6 +22,7 @@ export default function TagToDoContainer() {
     const data = await response.json();
     if (data["code"] === "token_not_valid") {
       getAccessToken();
+    
     } else {
       setTodos(data);
     }
@@ -35,7 +36,12 @@ export default function TagToDoContainer() {
       className=" bg-slate-50 flex flex-col w-2/5 h-fit mx-auto mt-24 p-3"
     >
       {todos?.map((item, index) => (
-        <TagToDoItem id={item.id} title={item.title} subtitle={item.subtitle} key={index} />
+        <TagToDoItem
+          id={item.id}
+          title={item.title}
+          subtitle={item.subtitle}
+          key={index}
+        />
       ))}
     </div>
   );
