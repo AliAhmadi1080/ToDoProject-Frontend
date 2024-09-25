@@ -118,7 +118,7 @@ export default function ToDoCreateContainer() {
         placeholder="توضیحات بیشتر"
       ></textarea>
       <br />
-      <div className="border px-6 w-full">
+      <div className="px-6 w-full">
         <div className=" grid grid-cols-3 gap-5 ">
           <div className=" text-center">
             <h6 className="text-lg">تگ ها</h6>

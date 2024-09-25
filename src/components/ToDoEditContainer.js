@@ -130,7 +130,7 @@ export default function ToDoEditContainer() {
         }}
       ></textarea>
       <br />
-      <div className=" grid grid-cols-3 gap-5 border px-6 w-full">
+      <div className=" grid grid-cols-3 gap-5 px-6 w-full">
         <div className=" text-center">
           <h6 className="text-lg">تگ ها</h6>
           <select
