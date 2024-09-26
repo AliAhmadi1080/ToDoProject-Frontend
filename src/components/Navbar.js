@@ -27,27 +27,47 @@ export default function Navbar() {
                   <div
                     id="myDropdown"
                     style={{
-                      display: "block",
                       position: "absolute",
                       backgroundColor: "#f1f1f1",
                       minWidth: "160px",
                       overflow: "auto",
                       zIndex: "1",
                     }}
-                    className=" shadow-xl flex flex-col"
+                    className=" shadow-xl flex"
                   >
-                    <Link to={`/todo/create`}>
-                      <div className="block">ایجاد todo</div>
-                    </Link>
-                    <Link to={`/tag/create`}>
-                      <div className="block">ایجاد تگ</div>
-                    </Link>
-                    <Link to={`/status/create`}>
-                      <div className="block">ایجاد وضعیت</div>
-                    </Link>
-                    <Link to={`/todolist/create`}>
-                      <div className="block">ایجاد لیست todo</div>
-                    </Link>
+                    <div className="flex flex-col mx-2 px-2 border-l-2">
+                      <Link to={`/todo/create`}>
+                        <div>ایجاد todo</div>
+                      </Link>
+                      <Link to={`/todo/`}>
+                        <div>مشاهده todo ها</div>
+                      </Link>
+                    </div>
+                    <div className="flex flex-col mx-2 px-2 border-l-2">
+                      <Link to={`/todo/tag/create`}>
+                        <div>ایجاد تگ</div>
+                      </Link>
+                      <Link to={`/todo/tag/`}>
+                        <div>مشاهده تگ ها</div>
+                      </Link>
+                    </div>
+                    <div className="flex flex-col mx-2 px-2 border-l-2">
+                      <Link to={`/todo/status/create`}>
+                        <div>ایجاد وضعیت</div>
+                      </Link>
+                      <Link to={`/todo/status`}>
+                        <div>مشاهده وضعیت ها</div>
+                      </Link>
+                    </div>
+                    <div className="flex flex-col mx-2 px-2">
+                    <Link to={`/todo/todolist/create`}>
+                        <div>ایجاد لیست todo</div>
+                      </Link>
+                      <Link to={`/todo/todolist`}>
+                        <div>مشاهده لیست todo ها</div>
+                      </Link>
+                      
+                    </div>
                   </div>
                 ) : (
                   <></>
