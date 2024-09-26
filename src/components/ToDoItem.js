@@ -3,8 +3,8 @@ import { Link } from "react-router-dom";
 export default function ToDoItem(props) {
   return (
     <Link
-      to={`/todo/${
-        typeof props.toDoId === "undefined" ? 'tag/'+props.tagSlug : props.toDoId
+      to={`/${
+        typeof props.toDoId === "undefined" ? 'tag/'+props.tagSlug : 'todo/'+props.toDoId
       }`}
       className="w-full"
     >
