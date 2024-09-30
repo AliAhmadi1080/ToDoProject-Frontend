@@ -8,6 +8,7 @@ import { useNavigate, useParams } from "react-router-dom";
 import ToDoCreateContainer from "./ToDoCreateContainer";
 import ToDoEditContainer from "./ToDoEditContainer";
 import TagToDoListContainer from "./TagToDoContainer";
+import TagCreateContainer from "./TagCreateContainer";
 
 export default function ToDoPage({ which = "detail" }) {
   const navigate = useNavigate();
@@ -99,6 +100,19 @@ export default function ToDoPage({ which = "detail" }) {
           <GetToDoContext.Provider value={[todoList, tagList]}>
             <ToDoSideBar />
             <TagToDoListContainer />
+          </GetToDoContext.Provider>
+        </div>
+      </>
+    );
+  }
+  else if (which === "tagcreate") {
+    return (
+      <>
+        <Navbar />
+        <div className="flex h-full" dir="ltr">
+          <GetToDoContext.Provider value={[todoList, tagList]}>
+            <ToDoSideBar />
+            <TagCreateContainer />
           </GetToDoContext.Provider>
         </div>
       </>
