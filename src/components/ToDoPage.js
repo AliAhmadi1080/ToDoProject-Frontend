@@ -9,6 +9,8 @@ import ToDoCreateContainer from "./ToDoCreateContainer";
 import ToDoEditContainer from "./ToDoEditContainer";
 import TagToDoListContainer from "./TagToDoContainer";
 import TagCreateContainer from "./TagCreateContainer";
+import StatusCreateContainer from "./StatusCreateContainer";
+import ShowStatusContainer from "./ShowStatusContainer";
 
 export default function ToDoPage({ which = "detail" }) {
   const navigate = useNavigate();
@@ -104,8 +106,7 @@ export default function ToDoPage({ which = "detail" }) {
         </div>
       </>
     );
-  }
-  else if (which === "tagcreate") {
+  } else if (which === "tagcreate") {
     return (
       <>
         <Navbar />
@@ -113,6 +114,30 @@ export default function ToDoPage({ which = "detail" }) {
           <GetToDoContext.Provider value={[todoList, tagList]}>
             <ToDoSideBar />
             <TagCreateContainer />
+          </GetToDoContext.Provider>
+        </div>
+      </>
+    );
+  } else if (which === "statuscreate") {
+    return (
+      <>
+        <Navbar />
+        <div className="flex h-full" dir="ltr">
+          <GetToDoContext.Provider value={[todoList, tagList]}>
+            <ToDoSideBar />
+            <StatusCreateContainer />
+          </GetToDoContext.Provider>
+        </div>
+      </>
+    );
+  }else if (which === "statusshow") {
+    return (
+      <>
+        <Navbar />
+        <div className="flex h-full" dir="ltr">
+          <GetToDoContext.Provider value={[todoList, tagList]}>
+            <ToDoSideBar />
+            <ShowStatusContainer />
           </GetToDoContext.Provider>
         </div>
       </>

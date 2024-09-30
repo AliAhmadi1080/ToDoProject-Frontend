@@ -18,6 +18,8 @@ function App() {
           <Route path="/login" element={<LoginFormPage />} />
           <Route path="/tag/:tagSlug" element={<ToDoPage which="tagtodo" />} />
           <Route path="/tag/create" element={<ToDoPage which="tagcreate" />} />
+          <Route path="/status/create" element={<ToDoPage which="statuscreate" />} />
+          <Route path="/status" element={<ToDoPage which="statusshow" />} />
           <Route path="/todo/:todoId" element={<ToDoPage which='detail'/>} />
           <Route path="/todo/:todoId/edit" element={<ToDoPage which='edit'/>} />
           <Route path="/todo/create" element={<ToDoPage which='create'/>} />
