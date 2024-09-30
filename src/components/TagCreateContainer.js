@@ -1,21 +1,22 @@
 import { useState } from "react";
 
 export default function TagCreateContainer() {
-    const createTag = async () => {
-        const response = await fetch("http://localhost:8000/todo/tag", {
-          method: "POST",
-          headers: {
-            "Content-Type": "application/json",
-            Authorization: "Bearer " + localStorage.getItem("access"),
-          },
-          body: JSON.stringify({name:inputName})
-        });
-    
-        if (response.ok) {
-            console.log('ok')
-        } else {
-        }
-      };
+  const createTag = async () => {
+    const response = await fetch("http://localhost:8000/todo/tag", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+        Authorization: "Bearer " + localStorage.getItem("access"),
+      },
+
+      body: JSON.stringify({ name: inputName }),
+    });
+
+    if (response.ok) {
+      console.log("ok");
+    } else {
+    }
+  };
   const [inputName, setInputName] = useState("");
   return (
     <>
@@ -35,7 +36,10 @@ export default function TagCreateContainer() {
             }}
           />
         </div>
-        <button onClick={()=>createTag()} className=" bg-sky-600 w-full text-white p-2 rounded-b-xl hover:shadow-2xl hover:bg-sky-700">
+        <button
+          onClick={() => createTag()}
+          className=" bg-sky-600 w-full text-white p-2 rounded-b-xl hover:shadow-2xl hover:bg-sky-700"
+        >
           ایجاد
         </button>
       </div>
