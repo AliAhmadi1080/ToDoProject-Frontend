@@ -17,6 +17,7 @@ function App() {
           <Route path="/register" element={<RegisterFormPage />} />
           <Route path="/login" element={<LoginFormPage />} />
           <Route path="/tag/:tagSlug" element={<ToDoPage which="tagtodo" />} />
+          <Route path="/tag/create" element={<ToDoPage which="tagcreate" />} />
           <Route path="/todo/:todoId" element={<ToDoPage which='detail'/>} />
           <Route path="/todo/:todoId/edit" element={<ToDoPage which='edit'/>} />
           <Route path="/todo/create" element={<ToDoPage which='create'/>} />

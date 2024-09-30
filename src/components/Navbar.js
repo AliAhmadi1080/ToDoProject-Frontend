@@ -44,26 +44,26 @@ export default function Navbar() {
                       </Link>
                     </div>
                     <div className="flex flex-col mx-2 px-2 border-l-2">
-                      <Link to={`/todo/tag/create`}>
+                      <Link to={`/tag/create`}>
                         <div>ایجاد تگ</div>
                       </Link>
-                      <Link to={`/todo/tag/`}>
+                      <Link to={`/todo/`}>
                         <div>مشاهده تگ ها</div>
                       </Link>
                     </div>
                     <div className="flex flex-col mx-2 px-2 border-l-2">
-                      <Link to={`/todo/status/create`}>
+                      <Link to={`/status/create`}>
                         <div>ایجاد وضعیت</div>
                       </Link>
-                      <Link to={`/todo/status`}>
+                      <Link to={`/status`}>
                         <div>مشاهده وضعیت ها</div>
                       </Link>
                     </div>
                     <div className="flex flex-col mx-2 px-2">
-                    <Link to={`/todo/todolist/create`}>
+                    <Link to={`/todolist/create`}>
                         <div>ایجاد لیست todo</div>
                       </Link>
-                      <Link to={`/todo/todolist`}>
+                      <Link to={`/todolist`}>
                         <div>مشاهده لیست todo ها</div>
                       </Link>
                       
