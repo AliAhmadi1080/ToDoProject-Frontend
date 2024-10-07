@@ -11,7 +11,20 @@ export default function Navbar() {
     <div className="flex justify-start border rounded-xl">
       {userInfo.isauth ? (
         <>
-          <NavbarItem text="خانه" />
+          <NavbarItem
+            text={
+              <Link to={`/`}>
+                <div>خانه</div>
+              </Link>
+            }
+          />
+          <NavbarItem
+            text={
+              <Link to={`/#`}>
+                <div>درباره ما</div>
+              </Link>
+            }
+          />
           <NavbarItem
             text={
               <div
@@ -60,13 +73,12 @@ export default function Navbar() {
                       </Link>
                     </div>
                     <div className="flex flex-col mx-2 px-2">
-                    <Link to={`/todolist/create`}>
+                      <Link to={`/todolist/create`}>
                         <div>ایجاد لیست todo</div>
                       </Link>
                       <Link to={`/todolist`}>
                         <div>مشاهده لیست todo ها</div>
                       </Link>
-                      
                     </div>
                   </div>
                 ) : (
@@ -85,10 +97,34 @@ export default function Navbar() {
         </>
       ) : (
         <>
-          <NavbarItem text="ورود" />
-          <NavbarItem text="ثبت نام" />
-          <NavbarItem text="خانه" />
-          <NavbarItem text="درباره" />
+          <NavbarItem
+            text={
+              <Link to={`/login`}>
+                <div>ورود</div>
+              </Link>
+            }
+          />
+          <NavbarItem
+            text={
+              <Link to={`/register`}>
+                <div>ثبت نام</div>
+              </Link>
+            }
+          />
+          <NavbarItem
+            text={
+              <Link to={`/`}>
+                <div>خانه</div>
+              </Link>
+            }
+          />
+          <NavbarItem
+            text={
+              <Link to={`/#`}>
+                <div>درباره ما</div>
+              </Link>
+            }
+          />
           <NavbarItem
             text={
               <p className=" text-2xl mr-[10rem]  cursor-auto">
