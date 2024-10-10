@@ -60,7 +60,7 @@ export default function Navbar() {
                       <Link to={`/tag/create`}>
                         <div>ایجاد تگ</div>
                       </Link>
-                      <Link to={`/todo/`}>
+                      <Link to={`/tag`}>
                         <div>مشاهده تگ ها</div>
                       </Link>
                     </div>
