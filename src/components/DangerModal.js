@@ -1,6 +1,6 @@
-export default function DangerModal({ title, text, isOpen, setIsOpen, id }) {
+export default function DangerModal({ title, text, isOpen, setIsOpen, id , path="http://localhost:8000/todo/" + id + "/" }) {
   const deleteToDo = async () => {
-    const response = await fetch("http://localhost:8000/todo/" + id + "/", {
+    const response = await fetch(path, {
       method: "DELETE",
       headers: {
         "Content-Type": "application/json",
