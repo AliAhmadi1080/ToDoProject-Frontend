@@ -17,7 +17,6 @@ export default function RegisterForm() {
     ) {
       return;
     }
-    console.log(username);
     const response = await fetch("http://localhost:8000/api-auth/register/", {
       method: "POST",
       headers: {
@@ -33,7 +32,6 @@ export default function RegisterForm() {
 
     const data = await response.json();
     if (response.ok) {
-      console.log(data);
       setIsSuccess(true)
     } else {
       console.error(data.message);

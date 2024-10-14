@@ -48,9 +48,6 @@ export default function LoginForm() {
             <button
               style={{ background: "#0d6efd" }}
               className="p-2 rounded-lg text-white"
-              onClick={() => {
-                console.log("you think submited");
-              }}
             >
               ارسال
             </button>

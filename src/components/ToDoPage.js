@@ -156,6 +156,5 @@ export default function ToDoPage({ which = "detail" }) {
       </>
     );
   }
-  console.log("we are hare");
   return <></>;
 }

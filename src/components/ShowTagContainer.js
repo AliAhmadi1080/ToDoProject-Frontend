@@ -21,11 +21,9 @@ export default function ShowTagContainer() {
       setTag(data);
     }
   };
-  console.log(tag);
   useEffect(() => {
     getTag();
   }, []);
-  console.log(tag);
   return (
     <>
       <div

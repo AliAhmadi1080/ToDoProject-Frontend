@@ -13,7 +13,7 @@ export default function TagCreateContainer() {
     });
 
     if (response.ok) {
-      console.log("ok");
+
     } else {
     }
   };

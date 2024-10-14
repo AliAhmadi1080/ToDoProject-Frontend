@@ -21,11 +21,9 @@ export default function ShowStatusContainer() {
       setStatus(data);
     }
   };
-  console.log(status);
   useEffect(() => {
     getStatus();
   }, []);
-  console.log(status);
   return (
     <>
       <div

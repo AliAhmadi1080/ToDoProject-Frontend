@@ -12,7 +12,6 @@ export default function StatusCreateContainer() {
         });
     
         if (response.ok) {
-            console.log('ok')
         } else {
         }
       };
