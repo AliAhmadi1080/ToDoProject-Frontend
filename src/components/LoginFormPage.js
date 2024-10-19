@@ -6,7 +6,6 @@ import Navbar from "./Navbar";
 export default function LoginFormPage(props) {
   return (
     <>
-      <Navbar />
       <div dir="ltr" className="flex justify-between">
         <LoginFormImage />
         <div dir="rtl" className="w-full mr-[12rem] mt-10 max-w-[30%]">

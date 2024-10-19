@@ -62,7 +62,6 @@ export default function ToDoPage({ which = "detail" }) {
   if (which === "detail") {
     return (
       <>
-        <Navbar />
         <div className="flex h-full" dir="ltr">
           <GetToDoContext.Provider value={[todoList, tagList]}>
             <ToDoSideBar />
@@ -74,7 +73,6 @@ export default function ToDoPage({ which = "detail" }) {
   } else if (which === "create") {
     return (
       <>
-        <Navbar />
         <div className="flex h-full" dir="ltr">
           <GetToDoContext.Provider value={[todoList, tagList]}>
             <ToDoSideBar />
@@ -86,7 +84,6 @@ export default function ToDoPage({ which = "detail" }) {
   } else if (which === "tagshow") {
     return (
       <>
-        <Navbar />
         <div className="flex h-full" dir="ltr">
           <GetToDoContext.Provider value={[todoList, tagList]}>
             <ToDoSideBar />
@@ -98,7 +95,6 @@ export default function ToDoPage({ which = "detail" }) {
   } else if (which === "edit") {
     return (
       <>
-        <Navbar />
         <div className="flex h-full" dir="ltr">
           <GetToDoContext.Provider value={[todoList, tagList]}>
             <ToDoSideBar />
@@ -110,7 +106,6 @@ export default function ToDoPage({ which = "detail" }) {
   } else if (which === "tagtodo") {
     return (
       <>
-        <Navbar />
         <div className="flex h-full" dir="ltr">
           <GetToDoContext.Provider value={[todoList, tagList]}>
             <ToDoSideBar />
@@ -122,7 +117,6 @@ export default function ToDoPage({ which = "detail" }) {
   } else if (which === "tagcreate") {
     return (
       <>
-        <Navbar />
         <div className="flex h-full" dir="ltr">
           <GetToDoContext.Provider value={[todoList, tagList]}>
             <ToDoSideBar />
@@ -134,7 +128,6 @@ export default function ToDoPage({ which = "detail" }) {
   } else if (which === "statuscreate") {
     return (
       <>
-        <Navbar />
         <div className="flex h-full" dir="ltr">
           <GetToDoContext.Provider value={[todoList, tagList]}>
             <ToDoSideBar />
@@ -146,7 +139,6 @@ export default function ToDoPage({ which = "detail" }) {
   } else if (which === "statusshow") {
     return (
       <>
-        <Navbar />
         <div className="flex h-full" dir="ltr">
           <GetToDoContext.Provider value={[todoList, tagList]}>
             <ToDoSideBar />
