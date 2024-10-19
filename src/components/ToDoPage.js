@@ -1,5 +1,4 @@
 import { useEffect, useState } from "react";
-import Navbar from "./Navbar";
 import ToDoDetailContainer from "./ToDoDetailContainer";
 import ToDoSideBar from "./ToDoSideBar";
 import GetToDoContext from "../contexts/GetToDoContext";
@@ -12,6 +11,8 @@ import TagCreateContainer from "./TagCreateContainer";
 import StatusCreateContainer from "./StatusCreateContainer";
 import ShowStatusContainer from "./ShowStatusContainer";
 import ShowTagContainer from "./ShowTagContainer";
+import ToDoListCreateContainer from "./ToDoListCreateContainer";
+import ShowToDoListContainer from "./ShowToDoListContainer";
 
 export default function ToDoPage({ which = "detail" }) {
   const navigate = useNavigate();
@@ -143,6 +144,28 @@ export default function ToDoPage({ which = "detail" }) {
           <GetToDoContext.Provider value={[todoList, tagList]}>
             <ToDoSideBar />
             <ShowStatusContainer />
+          </GetToDoContext.Provider>
+        </div>
+      </>
+    );
+  } else if (which === "todolistcreate") {
+    return (
+      <>
+        <div className="flex h-full" dir="ltr">
+          <GetToDoContext.Provider value={[todoList, tagList]}>
+            <ToDoSideBar />
+            <ToDoListCreateContainer />
+          </GetToDoContext.Provider>
+        </div>
+      </>
+    );
+  } else if (which === "todolistshow") {
+    return (
+      <>
+        <div className="flex h-full" dir="ltr">
+          <GetToDoContext.Provider value={[todoList, tagList]}>
+            <ToDoSideBar />
+            <ShowToDoListContainer />
           </GetToDoContext.Provider>
         </div>
       </>

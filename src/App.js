@@ -25,7 +25,12 @@ function App() {
             path="/status/create"
             element={<ToDoPage which="statuscreate" />}
           />
+          <Route
+            path="/todolist/create"
+            element={<ToDoPage which="todolistcreate" />}
+          />
           <Route path="/status" element={<ToDoPage which="statusshow" />} />
+          <Route path="/todolist" element={<ToDoPage which="todolistshow" />} />
           <Route path="/todo/:todoId" element={<ToDoPage which="detail" />} />
           <Route
             path="/todo/:todoId/edit"

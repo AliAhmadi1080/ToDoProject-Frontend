@@ -72,5 +72,5 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/t
 ### TODOs
 - [ ] Create Home page
 - [ ] Create About page
-- [ ] Create container for creating ToDoList
+- [x] Create container for creating ToDoList
 - [ ] Create shortcuts for createing Tag, ToDoList, Status
