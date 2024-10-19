@@ -68,3 +68,9 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/d
 ### `npm run build` fails to minify
 
 This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+
+### TODOs
+- [ ] Create Home page
+- [ ] Create About page
+- [ ] Create container for creating ToDoList
+- [ ] Create shortcuts for createing Tag, ToDoList, Status
